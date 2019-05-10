@@ -1,0 +1,7 @@
+<block wx:for="{{fcList}}" wx:key='item_{{index}}'>
+
+  <view style='background: {{item.color}};' bindtap='gotoDetail' data-fc='{{item.fc}}'>
+    <image src='{{item.logo}}'></image>
+  </view>
+
+</block>

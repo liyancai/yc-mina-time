@@ -1,0 +1,36 @@
+<view wx:if='{{event}}' class='section-countdown' style='background-color: {{event.color}}; color:{{event.font_color}}'>
+  <view class='info-view'>
+    <view>距离<span>{{event.fc_name}}</span>最近一次</view>
+    <view>夺得<span>{{event.event_name}}</span>冠军</view>
+    <view>已经过去了</view>
+  </view>
+
+  <view class='time-view'>
+    <view>
+      <span>{{eventHasPassTime.year}}</span>
+      年
+      <span>{{eventHasPassTime.month}}</span>
+      个月
+      <span>{{eventHasPassTime.day}}</span>
+      天
+    </view>
+    <view>
+      <span>{{eventHasPassTime.hour}}</span>
+      小时
+      <span>{{eventHasPassTime.minutes}}</span>
+      分
+      <span>{{eventHasPassTime.second}}</span>
+      秒
+    </view>
+  </view>
+
+  <view class='desc-view'>{{event.desc}}</view>
+</view>
+
+<view wx:if='{{event}}' class="rich-text" style='background-color: {{event.color}}; color:{{event.font_color}}'>
+  <block wx:for="{{event.content}}" wx:key='cont_{{index}}'>
+    <image wx:if="{{item.type=='image'}}" src="{{item.value}}" mode="widthFix" lazy-load='true' bindtap='previewImage' data-src='{{item.value}}'></image>
+    <video wx:elif="{{item.type=='video'}}" src="{{item.value}}"></video>
+    <view wx:elif="{{item.type=='text'}}">{{item.value}}</view>
+  </block>
+</view>

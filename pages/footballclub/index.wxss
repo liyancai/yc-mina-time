@@ -1,0 +1,11 @@
+view {
+  width: 50vw; height: 300rpx;
+  color: #fff;
+  display: inline-flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+view image {
+  width: 200rpx; height: 200rpx;
+}

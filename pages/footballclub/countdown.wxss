@@ -1,0 +1,58 @@
+.section-countdown {
+  width: 100vw;
+  padding: 20rpx 0;
+  text-align: center;
+}
+
+.info-view,
+.time-view {
+  width: 100vw;
+  padding: 30rpx 0;
+}
+
+.info-view span {
+  margin: 0 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: gold;
+}
+.time-view > view {
+  height: 4rem;
+}
+.time-view span {
+  display: inline-block;
+  min-width: 40px;
+  padding: 10rpx;
+  background: #fff;
+  border-radius: 3px;
+  color: var(--main-font-color);
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+
+.desc-view {
+  width: 650rpx; line-height: 2rem;
+  margin: 20rpx auto; padding: 30rpx;
+  background: #fff;
+  border-radius: 4px;
+  color: var(--main-font-color);
+  text-indent: 2rem;
+  text-align: left;
+}
+
+.rich-text {
+  width: 700rpx; min-height: 30vh;
+  padding: 25rpx;
+  font-size: 12pt;
+}
+.rich-text view {
+  margin: 25rpx 0;
+  line-height: 2rem;
+  text-indent: 2em;
+}
+.rich-text image {
+  width: 100%; height: 300rpx;
+}
+.rich-text video {
+  width: 100%;
+}

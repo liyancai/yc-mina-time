@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/footballclub/index",
+    "pages/footballclub/countdown",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "时间123",
+    "navigationBarTextStyle": "black",
+    "backgroundColorTop": "#f8f8f8",
+    "backgroundColorBottom": "#f8f8f8",
+    "onReachBottomDistance": 300
+  },
+  "cloud": true,
+  "networkTimeout": {
+    "request": 8000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}
