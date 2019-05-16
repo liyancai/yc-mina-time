@@ -6,6 +6,7 @@ Page({
     db: null,
     timer: null,
     event: null,
+    imgList: [],
     eventHasPassTime: {}
   },
   onLoad: function (options) {
@@ -31,6 +32,12 @@ Page({
         that.setData({
           event: res.data[0],
         })
+
+        that.data.event.content.forEach(v => {
+          if (v.type == 'image') {
+            that.data.imgList.push(v.value)
+          }
+        });
 
         wx.setNavigationBarTitle({
           title: that.data.event.fc_name
@@ -63,7 +70,17 @@ Page({
 
   },
   previewImage: function (event) {
-    util.previewImage(event)
+    let src = event.currentTarget.dataset.src;//获取data-src
+    let imgList = this.data.imgList
+    if (imgList.length == 0) {
+      imgList.push(src)
+    }
+
+    var that = this
+    wx.previewImage({
+      current: src,
+      urls: imgList
+    })
   },
   onShareAppMessage: function () {
 

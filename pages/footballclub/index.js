@@ -22,12 +22,14 @@ Page({
       }
     })
   },
-
   gotoDetail(event) {
     let fc = event.currentTarget.dataset.fc
 
     wx.navigateTo({
       url: 'countdown?fc=' + fc
     })
+  },
+  onShareAppMessage: function () {
+
   }
 })

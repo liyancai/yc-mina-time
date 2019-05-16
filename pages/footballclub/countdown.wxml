@@ -1,4 +1,4 @@
-<view wx:if='{{event}}' class='section-countdown' style='background-color: {{event.color}}; color:{{event.font_color}}'>
+<view wx:if='{{event}}' class='section-countdown' style='background-color: {{event.color}};'>
   <view class='info-view'>
     <view>距离<span>{{event.fc_name}}</span>最近一次</view>
     <view>夺得<span>{{event.event_name}}</span>冠军</view>
