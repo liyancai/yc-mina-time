@@ -5,6 +5,7 @@ Page({
   data: {
     db: null,
     timer: null,
+    fcObj: {},
     event: null,
     imgList: [],
     eventHasPassTime: {}
@@ -15,13 +16,47 @@ Page({
     })
 
     let fc = options.fc
-    this.getEvent(fc)
+    this.getFootballClub(fc)
   },
   onUnload: function () {
     clearInterval(this.data.timer)
   },
+  getFootballClub(fc) {
+    var that = this
+    wx.showLoading({ title: '读取数据…' })
+    const coll = this.data.db.collection('fc-info')
+    coll.where({
+      fc: fc
+    }).get().then(res => {
+
+      if (res.data.length > 0) {
+        that.setData({
+          fcObj: res.data[0],
+        })
+
+        that.getEvent(fc)
+
+        wx.setNavigationBarTitle({
+          title: that.data.fcObj.name
+        })
+        wx.setNavigationBarColor({
+          frontColor: '#ffffff',
+          backgroundColor: that.data.fcObj.color,
+        })
+        wx.setBackgroundColor({
+          backgroundColor: that.data.fcObj.color,
+          backgroundColorTop: that.data.fcObj.color,
+          backgroundColorBottom: that.data.fcObj.color,
+        })
+      }
+      wx.hideLoading()
+    }).catch(err => {
+      wx.hideLoading()
+    })
+  },
   getEvent(fc) {
     var that = this
+    wx.showLoading({ title: '正在计算…' })
     const coll = this.data.db.collection('event-info')
     coll.where({
       fc: fc,
@@ -39,21 +74,11 @@ Page({
           }
         });
 
-        wx.setNavigationBarTitle({
-          title: that.data.event.fc_name
-        })
-        wx.setNavigationBarColor({
-          frontColor: that.data.event.font_color,
-          backgroundColor: that.data.event.color,
-        })
-        wx.setBackgroundColor({
-          backgroundColor: that.data.event.color,
-          backgroundColorTop: that.data.event.color,
-          backgroundColorBottom: that.data.event.color,
-        })
-
         that.showCountdownTime(that.data.event)
       }
+      wx.hideLoading()
+    }).catch(err => {
+      wx.hideLoading()
     })
   },
   showCountdownTime(event) {

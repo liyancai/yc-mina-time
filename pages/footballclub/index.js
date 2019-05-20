@@ -12,6 +12,7 @@ Page({
   },
   getData() {
     var that = this
+    wx.showLoading({ title: '加载中…'})
     const coll = this.data.db.collection('fc-info')
     coll.where({
       active: true
@@ -22,6 +23,9 @@ Page({
           fcList: res.data,
         })
       }
+      wx.hideLoading()
+    }).catch(err => {
+      wx.hideLoading()
     })
   },
   gotoDetail(event) {
