@@ -58,3 +58,9 @@
 .rich-text video {
   width: 100%;
 }
+
+.empty-view {
+  margin: 100rpx 0;
+  text-align: center;
+  color: var(--tips-font-color);
+}

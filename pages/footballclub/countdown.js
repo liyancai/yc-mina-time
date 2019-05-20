@@ -4,6 +4,7 @@ const util = require('../../utils/util.js')
 Page({
   data: {
     db: null,
+    isEmpty: false,
     timer: null,
     fcObj: {},
     event: null,
@@ -75,6 +76,10 @@ Page({
         });
 
         that.showCountdownTime(that.data.event)
+      } else {
+        that.setData({
+          isEmpty: true
+        })
       }
       wx.hideLoading()
     }).catch(err => {

@@ -34,3 +34,9 @@
     <view wx:elif="{{item.type=='text'}}">{{item.value}}</view>
   </block>
 </view>
+
+<view class='empty-view' wx:if='{{isEmpty}}'>
+暂未添加数据。
+
+联系作者：微信 461148124 
+</view>
