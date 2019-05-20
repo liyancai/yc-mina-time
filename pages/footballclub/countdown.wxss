@@ -45,6 +45,7 @@
   width: 700rpx; min-height: 30vh;
   padding: 25rpx;
   font-size: 12pt;
+  color: #fff;
 }
 .rich-text view {
   margin: 25rpx 0;

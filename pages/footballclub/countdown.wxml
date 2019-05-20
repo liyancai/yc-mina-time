@@ -1,6 +1,6 @@
-<view wx:if='{{event}}' class='section-countdown' style='background-color: {{event.color}};'>
+<view wx:if='{{event}}' class='section-countdown' style='background-color: {{fcObj.color}};'>
   <view class='info-view'>
-    <view>距离<span>{{event.fc_name}}</span>最近一次</view>
+    <view>距离<span>{{fcObj.name}}</span>最近一次</view>
     <view>夺得<span>{{event.event_name}}</span>冠军</view>
     <view>已经过去了</view>
   </view>
@@ -27,7 +27,7 @@
   <view class='desc-view'>{{event.desc}}</view>
 </view>
 
-<view wx:if='{{event}}' class="rich-text" style='background-color: {{event.color}}; color:{{event.font_color}}'>
+<view wx:if='{{event}}' class="rich-text" style='background-color: {{fcObj.color}};'>
   <block wx:for="{{event.content}}" wx:key='cont_{{index}}'>
     <image wx:if="{{item.type=='image'}}" src="{{item.value}}" mode="widthFix" lazy-load='true' bindtap='previewImage' data-src='{{item.value}}'></image>
     <video wx:elif="{{item.type=='video'}}" src="{{item.value}}"></video>
