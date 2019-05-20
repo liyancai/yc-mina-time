@@ -35,7 +35,7 @@ Page({
       url: 'countdown?fc=' + fc
     })
   },
-  onShareAppMessage: function () {
-
+  onShareAppMessage(res) {
   }
+
 })

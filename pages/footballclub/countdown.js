@@ -107,8 +107,16 @@ Page({
       urls: imgList
     })
   },
-  onShareAppMessage: function () {
-
+  onShareAppMessage(res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    let that = this
+    return {
+      title: '快乐是短暂的，需要不断的刺激。',
+      path: '/pages/footballclub/countdown?fc=' + that.data.fcObj.fc
+    }
   }
 
 })
