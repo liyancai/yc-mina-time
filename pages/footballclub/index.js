@@ -13,7 +13,9 @@ Page({
   getData() {
     var that = this
     const coll = this.data.db.collection('fc-info')
-    coll.get().then(res => {
+    coll.where({
+      active: true
+    }).orderBy('sort', 'asc').get().then(res => {
 
       if (res.data.length > 0) {
         that.setData({
