@@ -1,21 +1,14 @@
-/**index.wxss**/
-.userinfo {
+.list-bottom-view {
+  width: 100vw; height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.list-bottom-view image {
+  width: 60rpx; height: 60rpx;
   border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+  animation: playing 1.5s linear infinite;
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
 }

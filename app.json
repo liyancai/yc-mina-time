@@ -1,8 +1,16 @@
 {
   "pages": [
-    "pages/footballclub/index",
-    "pages/footballclub/countdown",
     "pages/index/index"
+  ],
+  "subpackages": [
+    {
+      "root": "football",
+      "name": "football",
+      "pages": [
+        "pages/countdown/index",
+        "pages/countdown/detail"
+      ]
+    }
   ],
   "window": {
     "backgroundColor": "#f8f8f8",

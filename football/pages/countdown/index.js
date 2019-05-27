@@ -12,7 +12,7 @@ Page({
   },
   getData() {
     var that = this
-    wx.showLoading({ title: '加载中…'})
+    wx.showLoading({ title: '加载中…' })
     const coll = this.data.db.collection('fc-info')
     coll.where({
       active: true
@@ -32,7 +32,7 @@ Page({
     let fc = event.currentTarget.dataset.fc
 
     wx.navigateTo({
-      url: 'countdown?fc=' + fc
+      url: 'detail?fc=' + fc
     })
   },
   onShareAppMessage(res) {

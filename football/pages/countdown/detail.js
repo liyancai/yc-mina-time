@@ -1,5 +1,4 @@
-const dateUtil = require('../../utils/date.js')
-const util = require('../../utils/util.js')
+const dateUtil = require('../../../utils/date.js')
 
 Page({
   data: {
@@ -120,7 +119,6 @@ Page({
     let that = this
     return {
       title: '快乐是短暂的，需要不断的刺激。',
-      path: '/pages/footballclub/countdown?fc=' + that.data.fcObj.fc
     }
   }
 
