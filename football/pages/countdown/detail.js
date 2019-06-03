@@ -131,7 +131,7 @@ Page({
     }
     let that = this
     return {
-      title: '快乐是短暂的，需要不断的刺激。',
+      title: '这里有一条关于' + that.data.fcObj.name + '的信息。去围观一下吧！',
     }
   }
 
