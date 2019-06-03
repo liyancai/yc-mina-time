@@ -112,9 +112,17 @@ Page({
     })
   },
   back2List() {
-    wx.reLaunch({
-      url: '/football/pages/countdown/index'
-    })
+    let fcListPage = '/football/pages/countdown/index'
+    let pages = getCurrentPages();
+    if(pages.length == 1) {
+      wx.reLaunch({
+        url: fcListPage
+      })
+    } else {
+      wx.navigateBack({
+        delta: 1
+      })
+    }
   },
   onShareAppMessage(res) {
     if (res.from === 'button') {
