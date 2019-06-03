@@ -111,6 +111,11 @@ Page({
       urls: imgList
     })
   },
+  back2List() {
+    wx.reLaunch({
+      url: '/football/pages/countdown/index'
+    })
+  },
   onShareAppMessage(res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮

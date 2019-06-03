@@ -1,5 +1,6 @@
 page {
   --main-font-color: #353535;
+  --main-font-color-light: #fff;
   --tips-font-color: #888888;
   --main-background-color: #f8f8f8;
 

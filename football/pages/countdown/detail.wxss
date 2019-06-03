@@ -64,3 +64,29 @@
   text-align: center;
   color: var(--tips-font-color);
 }
+
+.opt-view {
+  height: 150rpx;
+  position: fixed;
+  bottom: 100rpx; right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.opt-view button {
+  margin-right: -1px;
+  height: 60rpx; line-height: 60rpx;
+  background-color: #000;
+  color: var(--main-font-color-light);
+  font-size: 10pt;
+  border-radius: 30rpx 0 0 30rpx;
+}
+.opt-view button span {
+  width: 6pt; height: 6pt;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-width: 0 0 1px 1px;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}

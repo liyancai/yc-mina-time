@@ -40,3 +40,8 @@
 
 联系作者：微信 461148124 
 </view>
+
+<view class='opt-view'>
+  <button bindtap='back2List'><span></span>更多球队</button>
+  <button open-type='share'><span></span>分享好友</button>
+</view>
