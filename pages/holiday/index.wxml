@@ -1,0 +1,17 @@
+<swiper
+  indicator-dots='{{true}}'
+  skip-hidden-item-layout='{{false}}'
+  autoplay='{{false}}'
+  circular='{{false}}'
+  current='{{month}}'
+>
+  <block wx:for="{{holiday.content}}" wx:key='month_{{index}}'>
+    <swiper-item style='background-color: {{holiday.color}}'>
+      <image src='{{item.value}}' mode='widthFix' lazy-load='true'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<block wx:for="{{holiday.content}}" wx:key='month_{{index}}'>
+  <image src='{{item.value}}' mode='widthFix' lazy-load='true'></image>
+</block>

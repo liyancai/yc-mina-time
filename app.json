@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/holiday/index",
     "pages/index/index"
   ],
   "subpackages": [
