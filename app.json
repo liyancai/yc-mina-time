@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/holiday/index",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/holiday/index"
   ],
   "subpackages": [
     {

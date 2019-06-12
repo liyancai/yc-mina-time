@@ -43,8 +43,24 @@ Page({
       wx.hideLoading()
     })
   },
+  back2Home() {
+    let fcListPage = '/pages/index/index'
+    let pages = getCurrentPages();
+    if (pages.length == 1) {
+      wx.reLaunch({
+        url: fcListPage
+      })
+    } else {
+      wx.navigateBack({
+        delta: 1
+      })
+    }
+  },
   onShareAppMessage: function () {
-
+    let that = this
+    return {
+      title: '这里是关于' + that.data.holiday.title + '的信息。去围观一下吧！',
+    }
   }
 
 })

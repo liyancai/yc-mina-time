@@ -15,3 +15,8 @@
 <block wx:for="{{holiday.content}}" wx:key='month_{{index}}'>
   <image src='{{item.value}}' mode='widthFix' lazy-load='true'></image>
 </block>
+
+<view class='opt-view'>
+  <button bindtap='back2Home'><span></span>返回首页</button>
+  <button open-type='share'><span></span>分享好友</button>
+</view>
