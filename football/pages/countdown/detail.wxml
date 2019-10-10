@@ -7,19 +7,19 @@
 
   <view class='time-view'>
     <view>
-      <span>{{eventHasPassTime.year}}</span>
+      <span>{{eventHasPassTime.year || '00'}}</span>
       年
-      <span>{{eventHasPassTime.month}}</span>
-      个月
-      <span>{{eventHasPassTime.day}}</span>
+      <span>{{eventHasPassTime.month || '00'}}</span>
+      月
+      <span>{{eventHasPassTime.day || '00'}}</span>
       天
     </view>
     <view>
-      <span>{{eventHasPassTime.hour}}</span>
-      小时
-      <span>{{eventHasPassTime.minutes}}</span>
+      <span>{{eventHasPassTime.hour || '00'}}</span>
+      时
+      <span>{{eventHasPassTime.minutes || '00'}}</span>
       分
-      <span>{{eventHasPassTime.second}}</span>
+      <span>{{eventHasPassTime.second || '00'}}</span>
       秒
     </view>
   </view>

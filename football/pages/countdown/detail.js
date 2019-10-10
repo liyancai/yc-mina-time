@@ -1,4 +1,5 @@
 const dateUtil = require('../../../utils/date.js')
+const fontUtil = require('../../../utils/font.js')
 
 Page({
   data: {
@@ -14,6 +15,7 @@ Page({
     this.setData({
       db: wx.cloud.database()
     })
+    fontUtil.loadFontFace()
 
     let fc = options.fc
     this.getFootballClub(fc)
@@ -87,12 +89,23 @@ Page({
   },
   showCountdownTime(event) {
     let eventTime = event.time
+    let dealTime = (v) => {
+      return ('00' + v).substr(-2)
+    }
 
     let that = this
     this.setData({
       timer: setInterval(function () {
+        let obj = dateUtil.eventHasPassTime(eventTime)
         that.setData({
-          eventHasPassTime: dateUtil.eventHasPassTime(eventTime)
+          eventHasPassTime: {
+            year: dealTime(obj.year),
+            month: dealTime(obj.month),
+            day: dealTime(obj.day),
+            hour: dealTime(obj.hour),
+            minutes: dealTime(obj.minutes),
+            second: dealTime(obj.second),
+          }
         })
       }, 1000)
     })
