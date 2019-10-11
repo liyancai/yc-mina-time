@@ -22,8 +22,8 @@
 }
 .time-view span {
   display: inline-block;
-  min-width: 50px;
-  padding: 10rpx;
+  min-width: 45px;
+  padding: 8rpx;
   background: #fff;
   border-radius: 2px;
   color: var(--main-font-color);
