@@ -1,2 +1,3 @@
-<image bindtap='gotoHoliday' src='https://www.gov.cn/xinwen/2018-12/06/5346287/images/76d8501767774f48aac2bd9e737e545e.gif' mode='widthFix' lazy-load='true'></image>
+<image bindtap='gotoLife' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570810815814&di=d6507400b40fbf59db29f32adbc50465&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Fedu%2Fpics%2Fhv1%2F8%2F239%2F1601%2F104165978.png' mode='widthFix' lazy-load='true'></image>
 <image bindtap='gotoFootball' src='https://img1.qunliao.info/fastdfs4/M00/CA/3B/ChMf8Fzy912ABjc8AAOBH6-wsXA717.jpg' mode='widthFix' lazy-load='true'></image>
+<image bindtap='gotoHoliday' src='https://www.gov.cn/xinwen/2018-12/06/5346287/images/76d8501767774f48aac2bd9e737e545e.gif' mode='widthFix' lazy-load='true'></image>

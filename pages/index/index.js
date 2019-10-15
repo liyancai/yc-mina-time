@@ -14,5 +14,10 @@ Page({
     wx.navigateTo({
       url: '/football/pages/countdown/index'
     })
+  },
+  gotoLife() {
+    wx.navigateTo({
+      url: '/life/pages/countdown/ymd'
+    })
   }
 })

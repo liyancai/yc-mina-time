@@ -11,6 +11,14 @@
         "pages/countdown/index",
         "pages/countdown/detail"
       ]
+    },
+    {
+      "root": "life",
+      "name": "life",
+      "pages": [
+        "pages/countdown/index",
+        "pages/countdown/ymd"
+      ]
     }
   ],
   "window": {

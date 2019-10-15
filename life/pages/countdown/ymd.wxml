@@ -1,0 +1,39 @@
+<swiper
+  indicator-dots='{{true}}'
+  skip-hidden-item-layout='{{false}}'
+  autoplay='{{false}}'
+  circular='{{false}}'
+>
+  <swiper-item>
+    <view>{{nowObj.year}} 年</view>
+    <view class="battery">
+      <view class="battery-hat"></view>
+      <view class="battery-main">
+        <view class="battery-power {{yearPercent <= 20 ? 'lower-power': ''}}" style="height: {{yearPercent}}%;">{{yearPercent}}%</view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view>{{nowObj.year}} 年 {{nowObj.month}} 月</view>
+    <view class="battery">
+      <view class="battery-hat"></view>
+      <view class="battery-main">
+        <view class="battery-power {{monthPercent <= 20 ? 'lower-power': ''}}"style="height: {{monthPercent}}%;">{{monthPercent}}%</view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view>{{nowObj.year}} 年 {{nowObj.month}} 月 {{nowObj.day}} 日</view>
+    <view class="battery">
+      <view class="battery-hat"></view>
+      <view class="battery-main">
+        <view class="battery-power {{dayPercent <= 20 ? 'lower-power': ''}}"style="height: {{dayPercent}}%;">{{dayPercent}}%</view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class='opt-view'>
+  <button bindtap='back2Home'><span></span>返回首页</button>
+  <button open-type='share'><span></span>分享好友</button>
+</view>
