@@ -8,10 +8,10 @@ Page({
       month: 0,
       day: 0
     },
-    dayPercent: 0,
-    monthPercent: 0,
-    yearPercent: 0,
-    lifePercent: 0,
+    dayPercent: 100,
+    monthPercent: 100,
+    yearPercent: 100,
+    lifePercent: 100,
   },
   onLoad: function (options) {
     let now = new Date()
@@ -21,7 +21,7 @@ Page({
     this.setData({
       dayPercent: that.getPercent(dateUtil.hasPassDay(now), dateUtil.totalDay(), 4),
       monthPercent: that.getPercent(dateUtil.hasPassMonth(now), dateUtil.totalMonth(), 4),
-      yearPercent: that.getPercent(dateUtil.hasPassYear(now), dateUtil.totalYear(), 6),
+      yearPercent: that.getPercent(dateUtil.hasPassYear(now), dateUtil.totalYear(), 4),
       lifePercent: that.getPercent(dateUtil.hasPassLife(born, now), dateUtil.totalLife(), 2),
 
       nowObj: {
@@ -35,7 +35,7 @@ Page({
         that.setData({
           dayPercent: that.getPercent(dateUtil.hasPassDay(now), dateUtil.totalDay(), 4),
           monthPercent: that.getPercent(dateUtil.hasPassMonth(now), dateUtil.totalMonth(), 4),
-          yearPercent: that.getPercent(dateUtil.hasPassYear(now), dateUtil.totalYear(), 6),
+          yearPercent: that.getPercent(dateUtil.hasPassYear(now), dateUtil.totalYear(), 4),
           lifePercent: that.getPercent(dateUtil.hasPassLife(born, now), dateUtil.totalLife(), 2),
 
           nowObj: {

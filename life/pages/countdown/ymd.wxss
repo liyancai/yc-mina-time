@@ -34,7 +34,7 @@ swiper-item > view:first-child {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background: linear-gradient(60deg, rgba(5, 226, 9, .9) 0%, #05E209 100%);
+    background: linear-gradient(90deg, #05e209 0%, rgba(5, 226, 9, .9) 50%, #05e209 100%);
     border-radius: 0 0 10px 10px;
     color: #fff;
     display: flex;
@@ -46,7 +46,7 @@ swiper-item > view:first-child {
 .battery-power::after {
     content: "";
     width: 200%; height: 10px;
-    background: rgba(5, 226, 9, 1);
+    background: rgba(5, 226, 9, .9);
     border-radius: 50% 50% 0 0;
     position: absolute;
     top: -5px;
